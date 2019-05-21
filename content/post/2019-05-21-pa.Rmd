@@ -18,15 +18,19 @@ web<-read_html(link, encoding = "utf-8") #读取数据，规定编码
 position<-web %>% html_nodes("div.a_detail") %>% html_text()
 print(position)
 
-library(jiebaR)
-library(wordcloud)
-seg <- qseg[position]
-seg <- table(seg)
-seg <- seg[!grepl('[0-9]+',names(seg))]
-length(seg)
-seg <- sort(seg, decreasing = TRUE)[1:100]
-seg  
 
+library(jiebaR)
+engine_s<-worker(stop_word = "C:/停用词表.txt")#初始化分词引擎并加载停用词。
+f<-segment(position,engine_s)#分词
+f <- table(f) #统计词频
+f <- f[!grepl('[0-9]+',names(f))] #去除数字
+length(f)  #查看处理完后剩余的词数
+f <- sort(f, decreasing = TRUE)[1:100]
+#降序排序，并提取出现次数最多的前100个词语
+f
+
+library(wordcloud2)
+wordcloud2(f, size = 1 ,shape='star') 
 ```
 
 
