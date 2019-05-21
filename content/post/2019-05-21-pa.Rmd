@@ -17,5 +17,17 @@ link <- "http://www.wenzhangba.com/guanhougan/201806/297978.html"
 web<-read_html(link, encoding = "utf-8") #读取数据，规定编码
 position<-web %>% html_nodes("div.a_detail") %>% html_text()
 print(position)
+
+library(jiebaR)
+library(wordcloud)
+seg <- qseg[position]
+seg <- table(seg)
+seg <- seg[!grepl('[0-9]+',names(seg))]
+length(seg)
+seg <- sort(seg, decreasing = TRUE)[1:100]
+seg  
+
 ```
+
+
 
