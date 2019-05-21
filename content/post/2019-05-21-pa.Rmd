@@ -1,0 +1,21 @@
+---
+title: 爬取"罗小黑战记影评"
+author: 隅桑的大白
+date: '2019-05-21'
+slug: pa
+categories:
+  - R
+tags: []
+---
+
+# 爬"罗小黑战记影评"
+http://www.wenzhangba.com/guanhougan/201806/297978.html
+
+```{r scrape}
+library(rvest)
+link <- "http://www.wenzhangba.com/guanhougan/201806/297978.html"
+web<-read_html(link, encoding = "utf-8") #读取数据，规定编码
+position<-web %>% html_nodes("div.a_detail") %>% html_text()
+print(position)
+```
+

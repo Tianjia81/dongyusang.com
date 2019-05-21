@@ -1,0 +1,52 @@
+baseurl = "/"
+languageCode = "en-us"
+title = "A Hugo website"
+theme = "hugo-lithium"
+googleAnalytics = ""
+disqusShortname = ""
+ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
+
+[permalinks]
+    post = "/:year/:month/:day/:slug/"
+
+[[menu.main]]
+    name = "G码云"
+    url = "https://gitee.com/"
+[[menu.main]]
+    name = "GitHub"
+    url = "https://github.com/Tianjia81/dongyusang.com"
+[[menu.main]]
+    name = "网易云音乐"
+    url = "https://music.163.com/"
+[[menu.main]]
+    name = "秀米"
+    url = "https://xiumi.us/#/studio/papers"
+[[menu.main]]
+    name = "觅元素"
+    url = "http://www.51yuansu.com/"
+[[menu.main]]
+    name = "微博"
+    url = "https://weibo.com/u/5357153521/home?wvr=5"
+    
+    
+[params]
+    description = "A website built through Hugo and blogdown."
+
+    # options for highlight.js (version, additional languages, and theme)
+    highlightjsVersion = "9.12.0"
+    highlightjsCDN = "//cdnjs.cloudflare.com/ajax/libs"
+    highlightjsLang = ["r", "yaml"]
+    highlightjsTheme = "github"
+
+    MathJaxCDN = "//cdnjs.cloudflare.com/ajax/libs"
+    MathJaxVersion = "2.7.5"
+
+    # path to the favicon, under "static"
+    favicon = "favicon.ico"
+
+    [params.logo]
+    url = "1.jpg"
+    width = 50
+    height = 50
+    alt = "Logo"
+
