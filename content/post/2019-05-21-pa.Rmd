@@ -21,16 +21,17 @@ print(position)
 
 library(jiebaR)
 engine_s<-worker(stop_word = "C:/停用词表.txt")#初始化分词引擎并加载停用词。
-f<-segment(position,engine_s)#分词
-f <- table(f) #统计词频
-f <- f[!grepl('[0-9]+',names(f))] #去除数字
-length(f)  #查看处理完后剩余的词数
-f <- sort(f, decreasing = TRUE)[1:100]
+seg<-segment(position,engine_s)#分词
+seg<- table(seg) #统计词频
+seg <- seg[!grepl('[0-9]+',names(seg))] #去除数字
+length(seg)  #查看处理完后剩余的词数
+seg <- sort(seg, decreasing = TRUE,)[1:100]
 #降序排序，并提取出现次数最多的前100个词语
-f
+seg
 
 library(wordcloud2)
-wordcloud2(f, size = 1 ,shape='star') 
+wordcloud2(seg, size = 1 ,shape='star') 
+
 ```
 
 
