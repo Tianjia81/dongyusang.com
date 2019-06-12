@@ -31,7 +31,6 @@ seg
 
 library(wordcloud2)
 wordcloud2(seg, size = 1 ,shape='star') 
-
 ```
 
 
