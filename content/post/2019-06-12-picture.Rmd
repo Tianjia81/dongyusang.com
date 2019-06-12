@@ -31,8 +31,6 @@ p <- ggplot(ToothGrowth, aes(x=dose, y=len,color=dose)) +
 
 p + theme(legend.position="top")#设置Legend 的位置
 
-ggplot(ToothGrowth, aes(x=dose, y=len)) + 
-  geom_boxplot()+
-  scale_color_manual(values=c("#1e1e1e", "#bf242a", "#2e4e7e"))
+
 ```
 

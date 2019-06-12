@@ -30,7 +30,7 @@ seg <- sort(seg, decreasing = TRUE,)[1:100]
 seg
 
 library(wordcloud2)
-wordcloud2(seg, size = 1 ,shape='star') 
+wordcloud2(data = seg) 
 ```
 
 
