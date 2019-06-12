@@ -1,0 +1,19 @@
+---
+title: 绘图
+author: 东隅桑
+date: '2019-06-12'
+slug: picture
+categories: []
+tags: []
+---
+
+```{r}
+library(ggplot2)
+data("mtcars")
+p <- ggplot(mtcars,aes(wt,mpg))
+p + geom_point(color="green")
+
+ggplot(data=mtcars,aes(x=wt,y=mpg))+geom_line(color="red",linetype=1)
+
+```
+
