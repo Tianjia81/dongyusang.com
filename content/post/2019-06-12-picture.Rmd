@@ -15,5 +15,9 @@ p + geom_point(color="green")
 
 ggplot(data=mtcars,aes(x=wt,y=mpg))+geom_line(color="red",linetype=1)
 
+ToothGrowth$dose <- as.factor(ToothGrowth$dose)
+head(ToothGrowth)
+ggplot(ToothGrowth, aes(x=dose, y=len))+geom_boxplot()
+
 ```
 
