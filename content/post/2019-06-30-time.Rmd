@@ -1,0 +1,25 @@
+---
+title: 时间
+author: '田佳'
+date: '2019-06-30'
+slug: time
+categories:
+  - R
+tags: []
+---
+
+```{r}
+birthday <-function(){
+  x<-Sys.Date()
+  y<-as.Date("2019-7-17")
+  h<-as.Date("1999-08-01")
+  s<-as.Date("2020-08-01")
+  a<-as.Date("2019-12-31")
+  print(paste("距离暑假回家还有",y-x,"天"))
+  print(paste("距离我出生已经过了",x-h,"天"))
+  print(paste("距离我明年生日还有",s-x,"天"))
+  print(paste("2019年还剩多少",a-x,"天"))
+}
+birthday()
+```
+
