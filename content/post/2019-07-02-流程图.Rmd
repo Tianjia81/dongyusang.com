@@ -2,7 +2,7 @@
 title: 补充一个流程图
 author: TJ
 date: '2019-07-02'
-slug: 流程图
+slug: lct
 categories:
   - R
 tags: []
