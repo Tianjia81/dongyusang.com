@@ -19,11 +19,11 @@ grViz(&quot;digraph flowchart {
       # node definitions with substituted label text
       node [fontname = Helvetica, shape = rectangle]        
       tab1 [label = &#39;@@1&#39;]
-      tab2 [label = &#39;@@2&#39;]
-      tab3 [label = &#39;@@3&#39;]
-      tab4 [label = &#39;@@4&#39;]
-      tab5 [label = &#39;@@5&#39;]
-
+      tab2 [label = &#39;@@2&#39;,color=&#39;blue&#39;]  
+      tab3 [label = &#39;@@3&#39;,color=&#39;red&#39;] 
+      tab4 [label = &#39;@@4&#39;,color=&#39;red&#39;]
+      tab5 [label = &#39;@@5&#39;,color=&#39;blue&#39;]
+      
       # edge definitions with the node IDs
       tab1 -&gt; tab2 
       tab1 -&gt; tab3
@@ -40,4 +40,6 @@ grViz(&quot;digraph flowchart {
       [5]: &#39;我弟&#39;
       &quot;)</code></pre>
 <div id="htmlwidget-1" style="width:672px;height:480px;" class="grViz html-widget"></div>
-<script type="application/json" data-for="htmlwidget-1">{"x":{"diagram":"digraph flowchart {\n      # node definitions with substituted label text\n      node [fontname = Helvetica, shape = rectangle]        \n      tab1 [label = \"我家\"]\n      tab2 [label = \"我爸\"]\n      tab3 [label = \"我妈\"]\n      tab4 [label = \"我\"]\n      tab5 [label = \"我弟\"]\n\n      # edge definitions with the node IDs\n      tab1 -> tab2 \n      tab1 -> tab3\n      tab2 -> tab4\n      tab2 -> tab5\n      tab3 -> tab4\n      tab3 -> tab5 \n      }","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<script type="application/json" data-for="htmlwidget-1">{"x":{"diagram":"digraph flowchart {\n      # node definitions with substituted label text\n      node [fontname = Helvetica, shape = rectangle]        \n      tab1 [label = \"我家\"]\n      tab2 [label = \"我爸\",color=\"blue\"]  \n      tab3 [label = \"我妈\",color=\"red\"] \n      tab4 [label = \"我\",color=\"red\"]\n      tab5 [label = \"我弟\",color=\"blue\"]\n      \n      # edge definitions with the node IDs\n      tab1 -> tab2 \n      tab1 -> tab3\n      tab2 -> tab4\n      tab2 -> tab5\n      tab3 -> tab4\n      tab3 -> tab5 \n      }","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<p>蓝色代表男</p>
+<p>红色代表女</p>
