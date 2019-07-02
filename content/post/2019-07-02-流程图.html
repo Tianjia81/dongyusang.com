@@ -1,0 +1,43 @@
+---
+title: 流程图
+author: TJ
+date: '2019-07-02'
+slug: 流程图
+categories:
+  - R
+tags: []
+---
+
+<script src="/rmarkdown-libs/htmlwidgets/htmlwidgets.js"></script>
+<script src="/rmarkdown-libs/viz/viz.js"></script>
+<link href="/rmarkdown-libs/DiagrammeR-styles/styles.css" rel="stylesheet" />
+<script src="/rmarkdown-libs/grViz-binding/grViz.js"></script>
+
+
+<pre class="r"><code>library(DiagrammeR)
+grViz(&quot;digraph flowchart {
+      # node definitions with substituted label text
+      node [fontname = Helvetica, shape = rectangle]        
+      tab1 [label = &#39;@@1&#39;]
+      tab2 [label = &#39;@@2&#39;]
+      tab3 [label = &#39;@@3&#39;]
+      tab4 [label = &#39;@@4&#39;]
+      tab5 [label = &#39;@@5&#39;]
+
+      # edge definitions with the node IDs
+      tab1 -&gt; tab2 
+      tab1 -&gt; tab3
+      tab2 -&gt; tab4
+      tab2 -&gt; tab5
+      tab3 -&gt; tab4
+      tab3 -&gt; tab5 
+      }
+
+      [1]: &#39;我家&#39;
+      [2]: &#39;我爸&#39;
+      [3]: &#39;我妈&#39;
+      [4]: &#39;我&#39;
+      [5]: &#39;我弟&#39;
+      &quot;)</code></pre>
+<div id="htmlwidget-1" style="width:672px;height:480px;" class="grViz html-widget"></div>
+<script type="application/json" data-for="htmlwidget-1">{"x":{"diagram":"digraph flowchart {\n      # node definitions with substituted label text\n      node [fontname = Helvetica, shape = rectangle]        \n      tab1 [label = \"我家\"]\n      tab2 [label = \"我爸\"]\n      tab3 [label = \"我妈\"]\n      tab4 [label = \"我\"]\n      tab5 [label = \"我弟\"]\n\n      # edge definitions with the node IDs\n      tab1 -> tab2 \n      tab1 -> tab3\n      tab2 -> tab4\n      tab2 -> tab5\n      tab3 -> tab4\n      tab3 -> tab5 \n      }","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
