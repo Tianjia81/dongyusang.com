@@ -34,7 +34,3 @@ grViz("digraph flowchart {
       [5]: '我弟'
       ")
 ```
-
-red-女
-
-blue-男
